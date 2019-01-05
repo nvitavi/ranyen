@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,7 @@ public class RanyenController {
 	@Autowired
 	private TripRepository tripRepository;
 
+	@CrossOrigin
 	@PostMapping("/add-user")
 	public void addUser(@RequestBody Person person) {
 		log.debug("Inside add user method");

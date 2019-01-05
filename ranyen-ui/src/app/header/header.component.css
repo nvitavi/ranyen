@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    border: 1px solid red;
+    padding: 4px;
+    margin: 4px;
+}
+
+.row {
+    width: 98%;
+    text-align: left;
+    border: 1px solid yellow;
+}
+
+.content {
+    display: inline-block;
+    border: 1px solid green;
+}
+
+.left-content {
+    float: left;
+}
+
+.right-content {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}

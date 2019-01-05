@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="rootMenu">Menu</button>
+<mat-menu #rootMenu="matMenu">
+    <button mat-menu-item>About</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Services</button>
+    <button mat-menu-item>Contact</button>
+</mat-menu>
+<mat-menu #subMenu="matMenu">
+    <button mat-menu-item (click)="openSignUpForm()">Sign Up</button>
+    <button mat-menu-item>Add Trip</button>
+</mat-menu>
