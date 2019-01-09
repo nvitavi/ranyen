@@ -6,6 +6,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.ranyen.model.Location;
 import com.ranyen.model.Person;
@@ -14,6 +15,7 @@ import com.ranyen.model.Trip;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
+@ActiveProfiles("local")
 public class BaseTestSetup {
 
 	@Autowired
