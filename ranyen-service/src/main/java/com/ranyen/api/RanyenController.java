@@ -31,7 +31,7 @@ public class RanyenController {
 
 	@Autowired
 	private TripRepository tripRepository;
-
+	
 	@CrossOrigin
 	@PostMapping("/add-user")
 	public void addUser(@RequestBody Person person) {
@@ -40,6 +40,7 @@ public class RanyenController {
 		log.debug("Person has been added");
 	}
 
+	@CrossOrigin
 	@PostMapping("/get-user")
 	public Person getUser(@RequestBody Person person) {
 		// TODO: first authenticate user
@@ -51,36 +52,42 @@ public class RanyenController {
 		}
 	}
 
+	@CrossOrigin
 	@PostMapping("/update-user")
 	public Person updateUser(@RequestBody Person person) {
 		// TODO: first authenticate user before updating
 		return personRepository.save(person);
 	}
 
+	@CrossOrigin
 	@PostMapping("/delete-user")
 	public void deleteUser(@RequestBody Person person) {
 		// TODO: first authenticate user before deleting
 		personRepository.delete(person);
 	}
 
+	@CrossOrigin
 	@PostMapping("/add-location")
 	public void addLocation(@RequestBody List<Location> locations) {
 		// TODO: first authenticate user
 		locationRepository.saveAll(locations);
 	}
 
+	@CrossOrigin
 	@PostMapping("/update-location")
 	public void updateLocation(@RequestBody List<Location> locations) {
 		// TODO: first authenticate user
 		locationRepository.saveAll(locations);
 	}
 
+	@CrossOrigin
 	@PostMapping("/delete-location")
 	public void deleteLocations(@RequestBody List<Location> locations) {
 		// TODO: first authenticate user
 		locationRepository.deleteAll(locations);
 	}
 
+	@CrossOrigin
 	@PostMapping("/get-trips")
 	public List<Trip> getTrips(@RequestBody Person person) {
 		// TODO: first authenticate user
